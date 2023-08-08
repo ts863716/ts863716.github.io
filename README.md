@@ -22,7 +22,7 @@ function test() {
 
 Using a business request as a scope of requirements, created a Power BI dashobard with data extracted from a SQL Server using SSMS.
 
-![EEG Band Discovery](Screenshot1.png)
+![Power BI Dashboard](Screenshot1.png)
 
 ### Decoding Physical and Cognitive Impacts of Particulate Matter Concentrations at Ultra-Fine Scales
 [Publication](https://www.mdpi.com/1424-8220/22/11/4240)
