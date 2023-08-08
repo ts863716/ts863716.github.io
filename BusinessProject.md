@@ -4,8 +4,8 @@
 
 Understanding the business requirements
 
-| Command | Description |
-| --- | --- |
+| As a (role) | I want (request / demand) | So that I (user value) | Acceptance Criteria |
+| --- | --- | --- | --- |
 | git status | List all new or modified files |
 | git diff | Show file differences that haven't been staged |
 
