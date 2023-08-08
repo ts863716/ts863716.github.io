@@ -11,8 +11,8 @@
 - Participate in meetings with stakeholders to get requirements needed for projects
 
 ## Projects
-### Data-Driven EEG Band Discovery with Decision Trees
-[Publication](https://www.mdpi.com/1424-8220/22/8/3048)
+### Business Project using SQL and Power BI 
+[Publication](https://ts863716.github.io/BusinessProject)
 
 ```
 function test() {
