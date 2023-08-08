@@ -14,12 +14,6 @@
 ### Business Project using SQL and Power BI 
 [Project Link](https://ts863716.github.io/BusinessProject)
 
-```
-function test() {
-  console.log("notice the blank line before this function?");
-}
-```
-
 Using a business request as a scope of requirements, created a Power BI dashobard with data extracted from a SQL Server using SSMS.
 
 ![Power BI Dashboard](Screenshot1.png)
