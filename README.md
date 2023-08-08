@@ -12,7 +12,7 @@
 
 ## Projects
 ### Business Project using SQL and Power BI 
-[Publication](https://ts863716.github.io/BusinessProject)
+[Project Link](https://ts863716.github.io/BusinessProject)
 
 ```
 function test() {
@@ -20,7 +20,7 @@ function test() {
 }
 ```
 
-Developed objective strategy for discovering optimal EEG bands based on signal power spectra using **Python**. This data-driven approach led to better characterization of the underlying power spectrum by identifying bands that outperformed the more commonly used band boundaries by a factor of two. The proposed method provides a fully automated and flexible approach to capturing key signal components and possibly discovering new indices of brain activity.
+Using a business request as a scope of requirements, created a Power BI dashobard with data extracted from a SQL Server using SSMS.
 
 ![EEG Band Discovery](/assets/img/eeg_band_discovery.jpeg)
 
