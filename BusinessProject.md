@@ -155,3 +155,9 @@ SELECT [ProductKey]
   WHERE OrderDateKey >= 2019 --Could also do LEFT (OrderDateKey, 4) >= YEAR(GETDATE()) - 2
   ORDER BY OrderDateKey ASC
 ```
+## Data Model
+
+Below is a screenshot of the data model after the the cleansed tables were imported into Power BI.
+
+This data model also shows how our Budget excel has been connected to our other tables.
+
