@@ -18,5 +18,27 @@ The business request for this project was an executive sales report for sales ma
 To create the necessary data model for doing our analysis and fulfilling the requirements above, the following tables were extracted using SQL
 
 ```SQL
-SELECT * FROM table
+-- Cleaning up table DimDate with info we dont need and selecting the date from 2019 and up
+SELECT [DateKey]
+      ,[FullDateAlternateKey] AS Date
+      --,[DayNumberOfWeek]
+      ,[EnglishDayNameOfWeek] AS Day
+      --,[SpanishDayNameOfWeek]
+      --,[FrenchDayNameOfWeek]
+      --,[DayNumberOfMonth]
+      --,[DayNumberOfYear]
+      --,[WeekNumberOfYear]
+      ,[EnglishMonthName] AS Month
+	  ,LEFT([EnglishMonthName], 3) AS MonthShort
+      --,[SpanishMonthName]
+      --,[FrenchMonthName]
+      ,[MonthNumberOfYear] AS MonthNo
+      ,[CalendarQuarter] AS Quarter
+      ,[CalendarYear] AS Year
+      --,[CalendarSemester]
+      --,[FiscalQuarter]
+      --,[FiscalYear]
+      --,[FiscalSemester]
+  FROM [AdventureWorksDW2019].[dbo].[DimDate]
+  WHERE CalendarYear >=2019
 ```
