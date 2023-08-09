@@ -161,3 +161,4 @@ Below is a screenshot of the data model after the the cleansed tables were impor
 
 This data model also shows how our Budget excel has been connected to our other tables.
 
+![Date Model](Screenshot2.png)
