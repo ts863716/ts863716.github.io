@@ -1,6 +1,6 @@
 [Home](https://ts863716.github.io/)
 
-## Business Project using SQL and Power BI 
+### Business Project using SQL and Power BI 
 
 ## Business Request & User Stories
 
