@@ -21,107 +21,44 @@ To create the necessary data model for doing our analysis and fulfilling the req
 -- Cleaning up table DimDate with info we dont need and selecting the date from 2019 and up
 SELECT [DateKey]
       ,[FullDateAlternateKey] AS Date
-      --,[DayNumberOfWeek]
       ,[EnglishDayNameOfWeek] AS Day
-      --,[SpanishDayNameOfWeek]
-      --,[FrenchDayNameOfWeek]
-      --,[DayNumberOfMonth]
-      --,[DayNumberOfYear]
-      --,[WeekNumberOfYear]
       ,[EnglishMonthName] AS Month
-	  ,LEFT([EnglishMonthName], 3) AS MonthShort
-      --,[SpanishMonthName]
-      --,[FrenchMonthName]
+      ,LEFT([EnglishMonthName], 3) AS MonthShort
       ,[MonthNumberOfYear] AS MonthNo
       ,[CalendarQuarter] AS Quarter
       ,[CalendarYear] AS Year
-      --,[CalendarSemester]
-      --,[FiscalQuarter]
-      --,[FiscalYear]
-      --,[FiscalSemester]
-  FROM [AdventureWorksDW2019].[dbo].[DimDate]
-  WHERE CalendarYear >=2019
+FROM [AdventureWorksDW2019].[dbo].[DimDate]
+WHERE CalendarYear >=2019
 ```
 
 ```SQL
 --Cleaned the DimCustomer table
 SELECT c.[CustomerKey] AS CustomerKey
-      --,[GeographyKey]
-      --,[CustomerAlternateKey]
-      --,[Title]
       ,c.[FirstName] AS [First Name]
-      --,[MiddleName]
       ,c.[LastName] AS [Last Name]
-      --,[NameStyle]
-      --,[BirthDate]
-      --,[MaritalStatus]
-      --,[Suffix]
       ,CASE c.[Gender] WHEN 'M' THEN 'Male' WHEN 'F' THEN 'Female' END AS Gender
-      --,[EmailAddress]
-      --,[YearlyIncome]
-      --,[TotalChildren]
-      --,[NumberChildrenAtHome]
-      --,[EnglishEducation]
-      --,[SpanishEducation]
-      --,[FrenchEducation]
-      --,[EnglishOccupation]
-      --,[SpanishOccupation]
-      --,[FrenchOccupation]
-      --,[HouseOwnerFlag]
-      --,[NumberCarsOwned]
-      --,[AddressLine1]
-      --,[AddressLine2]
-      --,[Phone]
       ,c.[DateFirstPurchase] AS DateFirstPurchased
-      --,[CommuteDistance]
-	  ,g.City AS [Customer City] -- Joined in Customer City from the Geography Table
-  FROM DimCustomer AS c LEFT JOIN DimGeography AS g on g.GeographyKey = c.GeographyKey
-  ORDER BY CustomerKey ASC
+      ,g.City AS [Customer City] -- Joined in Customer City from the Geography Table
+FROM DimCustomer AS c LEFT JOIN DimGeography AS g on g.GeographyKey = c.GeographyKey
+ORDER BY CustomerKey ASC
 ```
 
 ```SQL
 SELECT p.[ProductKey]
       ,p.[ProductAlternateKey] AS ProductItemCode
-      --,[ProductSubcategoryKey]
-      --,[WeightUnitMeasureCode]
-      --,[SizeUnitMeasureCode]
       ,p.[EnglishProductName] AS [Product Name]
-	  ,ps.EnglishProductSubcategoryName AS [Sub Category]
-	  ,pc.EnglishProductCategoryName AS [Product Category]
-      --,[SpanishProductName]
-      --,[FrenchProductName]
-      --,[StandardCost]
-      --,[FinishedGoodsFlag]
+      ,ps.EnglishProductSubcategoryName AS [Sub Category]
+      ,pc.EnglishProductCategoryName AS [Product Category]
       ,p.[Color] AS [Product Color]
-      --,[SafetyStockLevel]
-      --,[ReorderPoint]
-      --,[ListPrice]
       ,p.[Size] AS [Product Size]
-      --,[SizeRange]
-      --,[Weight]
-      --,[DaysToManufacture]
       ,p.[ProductLine] AS [Product Line]
-      --,[DealerPrice]
-      --,[Class]
-      --,[Style]
       ,p.[ModelName] AS [Product Model Name]
-      --,[LargePhoto]
       ,p.[EnglishDescription] AS [Product Description]
-      --,[FrenchDescription]
-      --,[ChineseDescription]
-      --,[ArabicDescription]
-      --,[HebrewDescription]
-      --,[ThaiDescription]
-      --,[GermanDescription]
-      --,[JapaneseDescription]
-      --,[TurkishDescription]
-      --,[StartDate]
-      --,[EndDate]
       ,ISNULL (p.Status, 'Outdated') AS [Product Status]
-  FROM [DimProduct] AS p
-  LEFT JOIN DimProductSubcategory AS ps ON ps.ProductSubcategoryKey = p.ProductSubcategoryKey
-  LEFT JOIN DimProductCategory AS pc ON ps.ProductCategoryKey = pc.ProductCategoryKey
-  ORDER BY p.ProductKey ASC
+FROM [DimProduct] AS p
+LEFT JOIN DimProductSubcategory AS ps ON ps.ProductSubcategoryKey = p.ProductSubcategoryKey
+LEFT JOIN DimProductCategory AS pc ON ps.ProductCategoryKey = pc.ProductCategoryKey
+ORDER BY p.ProductKey ASC
 ```
 
 ```SQL
@@ -130,30 +67,11 @@ SELECT [ProductKey]
       ,[DueDateKey]
       ,[ShipDateKey]
       ,[CustomerKey]
-      --,[PromotionKey]
-      --,[CurrencyKey]
-      --,[SalesTerritoryKey]
       ,[SalesOrderNumber]
-     -- ,[SalesOrderLineNumber]
-      --,[RevisionNumber]
-      --,[OrderQuantity]
-      --,[UnitPrice]
-      --,[ExtendedAmount]
-      --,[UnitPriceDiscountPct]
-      --,[DiscountAmount]
-      --,[ProductStandardCost]
-      --,[TotalProductCost]
       ,[SalesAmount]
-      --,[TaxAmt]
-      --,[Freight]
-      --,[CarrierTrackingNumber]
-      --,[CustomerPONumber]
-      --,[OrderDate]
-      --,[DueDate]
-      --,[ShipDate]
-  FROM [FactInternetSales]
-  WHERE OrderDateKey >= 2019 --Could also do LEFT (OrderDateKey, 4) >= YEAR(GETDATE()) - 2
-  ORDER BY OrderDateKey ASC
+FROM [FactInternetSales]
+WHERE OrderDateKey >= 2019 --Could also do LEFT (OrderDateKey, 4) >= YEAR(GETDATE()) - 2
+ORDER BY OrderDateKey ASC
 ```
 ## Data Model
 
