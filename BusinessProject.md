@@ -17,7 +17,7 @@ The business request for this project was an executive sales report for sales ma
 
 To create the necessary data model for doing our analysis and fulfilling the requirements above, the following tables were extracted using SQL
 
-```SQL
+```sql
 -- Cleaning up table DimDate with info we dont need and selecting the date from 2019 and up
 SELECT [DateKey]
       ,[FullDateAlternateKey] AS Date
