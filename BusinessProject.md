@@ -31,7 +31,7 @@ FROM [AdventureWorksDW2019].[dbo].[DimDate]
 WHERE CalendarYear >=2019
 ```
 
-```SQL
+```sql
 --Cleaned the DimCustomer table
 SELECT c.[CustomerKey] AS CustomerKey
       ,c.[FirstName] AS [First Name]
@@ -43,7 +43,7 @@ FROM DimCustomer AS c LEFT JOIN DimGeography AS g on g.GeographyKey = c.Geograph
 ORDER BY CustomerKey ASC
 ```
 
-```SQL
+```sql
 SELECT p.[ProductKey]
       ,p.[ProductAlternateKey] AS ProductItemCode
       ,p.[EnglishProductName] AS [Product Name]
@@ -61,7 +61,7 @@ LEFT JOIN DimProductCategory AS pc ON ps.ProductCategoryKey = pc.ProductCategory
 ORDER BY p.ProductKey ASC
 ```
 
-```SQL
+```sql
 SELECT [ProductKey]
       ,[OrderDateKey]
       ,[DueDateKey]
