@@ -25,3 +25,9 @@ Used Power BI and Etsy sales data from a woodworking business to create insights
 
 ![Bike Study](/assets/img/bike_study.jpeg)
 
+### Housing Data Dashboard
+[Project Link](https://ts863716.github.io/HousingProject)
+
+Used Power BI and Housing Sales data to create insights.
+
+![Housing Data](/assets/img/Screenshot3.png)
