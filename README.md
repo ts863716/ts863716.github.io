@@ -30,4 +30,4 @@ Used Power BI and Etsy sales data from a woodworking business to create insights
 
 Used Power BI and Housing Sales data to create insights.
 
-![Housing Data](/assets/img/Screenshot3.png)
+![Housing Data](Screenshot3.png)
