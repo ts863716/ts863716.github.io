@@ -4,6 +4,8 @@
 
 The goal of this project was to get a better understanidng of the housing market and the current trajectory we are heading towards. I wanted to find out if the market is going to continue to rise or if housing prices are starting to fall and try to find any relations.
 
+The 3.25 GB and 1,229,602 row dataset was downloaded from [here](https://www.redfin.com/news/data-center/)
+
 ## Data Cleansing & Transformation (SQL)
 
 To create the necessary data model for doing our analysis and fulfilling the requirements above, the following tables were extracted using SQL
