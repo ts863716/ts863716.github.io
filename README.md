@@ -19,11 +19,9 @@ Using a business request as a scope of requirements, created a Power BI dashobar
 ![Power BI Dashboard](Screenshot1.png)
 
 ### Etsy Business Sales Dashboard
-[Project Link](https://ts863716.github.io/EtsyProject)
+[Under Construction](https://ts863716.github.io/)
 
 Used Power BI and Etsy sales data from a woodworking business to create insights.
-
-![Bike Study](/assets/img/bike_study.jpeg)
 
 ### Housing Data Dashboard
 [Project Link](https://ts863716.github.io/HousingProject)
