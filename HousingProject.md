@@ -1,6 +1,6 @@
 [Home](https://ts863716.github.io/)
 
-### Housing Project using SQL and Power BI 
+### Housing Project using Power BI 
 
 The goal of this project was to get a better understanidng of the housing market and the current trajectory we are heading towards. I wanted to find out if the market is going to continue to rise or if housing prices are starting to fall and try to find any relations.
 
